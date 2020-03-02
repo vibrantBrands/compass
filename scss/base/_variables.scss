@@ -1,20 +1,23 @@
 
 
 // Fonts
-$base-font: 'Roboto Condensed', sans-serif;
-$secondary-font: 'Open Sans Condensed', serif;
-$font-stack-system: 'Roboto Condensed', sans-serif;
+$base-font: 'Open Sans', sans-serif;
+$main-font: 'Josefin Sans', sans-serif;
 
 // Colors 
 
-$cp-blue: #00a9d2;
+$cp-blue: rgb(0, 156, 196);
+$cp-green: #6cbe4c;
+$cp-gray: #4d4d4f;
+$cp-lite-blue: #63d2ed;
+$cp-lite-green: #7ae058;
 
 $black: #000;
 $white: #fff;
-$nh-gray: #a0a0a0;
+$nh-gray: $cp-gray;
 $nh-blue: $cp-blue;
 $nh-lt-blue: #36a6dc;
-$nh-green: #589d4a;
+$nh-green: $cp-green;
 $nh-gold: #e0a422;
 $nh-red: #de3a46;
 $hover-color: lighten($nh-blue, 10%);
@@ -32,7 +35,7 @@ $xl-breakpoint: 1200px;
 
 // Sizes 
 
-$content-max-width: 1200px;
+$content-max-width: 1400px;
 
 $topbar-height: 50px;
 $topbar-mobile-height: 90px;

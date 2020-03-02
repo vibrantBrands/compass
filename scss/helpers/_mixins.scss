@@ -22,7 +22,7 @@
     }
 }
 
-@mixin hide-mobile($breakpoint) {
+@mixin hide-mobile($breakpoint: $lg-breakpoint) {
 
    @media only screen and (max-width: $breakpoint) {
         display: none;
@@ -49,3 +49,13 @@
    bottom: $bottom;
    left: $left;
 }
+
+/* SCSS -- Change item width at a certain breakpoint for moblie layout. Default to 100% at   */
+
+@mixin mobile-full-width($breakpoint: $lg-breakpoint, $percentage: 100%) {
+  
+  @media screen and (max-width: $breakpoint){
+      width: $percentage;
+    }
+}
+

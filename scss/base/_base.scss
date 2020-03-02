@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Roboto+Condensed:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Open+Sans:400,700&display=swap');
 @import '../plugins/fontawesome/fontawesome.scss';
 @import '../plugins/fontawesome/fa-regular.scss';
+@import '../plugins/fontawesome/fa-solid.scss';
 @import "../plugins/fontawesome/fa-brands.scss";
-@import '../plugins/bourbon/bourbon';
-@import '../plugins/base/base';
-@import '../plugins/neat/neat';
+
 
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
@@ -109,110 +108,18 @@ textarea {
 
 body {
     font-size: 16px;
-    //text-align: center;
     font-family: $base-font;
 
     .container {
         margin: 0 auto;
-        max-width: 1070px;
+        max-width: 1400px;
+
+        a {
+            color: $cp-gray;
+            text-decoration: none;
+        }
     }
 }
-
-h1, h2, h3 {
-    margin-top: $header-top-margin;
-    color: $nh-blue;
-    font-weight: bold;
-}
-
-h1 {
-    font-size: $h1-text-size;
-}
-
-h2 {
-    font-size: $h2-text-size;
-}
-
-h3 {
-    font-size: $h3-text-size;
-}
-
-p {
-    font-size: $text-size;
-    line-height: $text-line-height;
-}
-
-.btn {
-    background: $white;
-    border-radius: 5px;
-    border: 2px solid $nh-blue;
-    color: $nh-blue;
-    font-size: 24px;
-    padding: 20px 40px;
-
-    &:hover {
-        color: $white;
-    }
-}
-
-.solid-btn {
-    align-items: center;
-    background: $nh-red;
-    color: $white;
-    cursor: pointer;
-    display: flex;
-    font-family: $secondary-font;
-    font-size: 18px;
-    justify-content: center;
-    padding: 15px 25px;
-
-    &.green {
-        background: $nh-green;
-    }
-    &.gold {
-        background: $nh-gold;
-    }
-}
-
-.bar {
-    align-items: center;
-    background: $nh-blue;
-    color: $white;
-    display: flex;
-    font-size: 24px;
-    height: 60px;
-    justify-content: center;
-    width: 100%;
-
-    &.large {
-        height: 80px;
-    }
-    &.blue {
-        background: $nh-blue;
-    }
-    &.lt-blue {
-        background: $nh-lt-blue;
-    }
-    &.red {
-        background: $nh-red;
-    }
-
-    @media only screen and (max-width: $md-breakpoint) {
-        padding-left: 30px;
-    }
-}
-
-.content {
-    margin-top: 138px;
-}
-
-
-
-
-
-
-
-
-
 
 
 /* ==========================================================================

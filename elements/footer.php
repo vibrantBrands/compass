@@ -1,37 +1,37 @@
 		<footer>
-			<div class="footer-wrapper">
+			<div class="container">
 				<div>
-					<img src="<?php echo $this->getThemePath(); ?>/images/nh-logo.png">
+					<img src="<?php echo $this->getThemePath(); ?>/images/Compass-Pointe-Logo.svg" class="logo">
+					<p><small>Property owned and managed by third-pary real estate developers.</small></p>
 				</div>
-				<div class="middle-col">
-						<i class="fa fa-phone"></i><a href="tel:8454348300">(845) 434-8300</a>
-						<nav class="nav">
-					        <ul>
-					          <li>
-					            <a href="/">Our Services</a>
-					          </li>
-					          <li>
-					              <a href="/about">Who We Are</a>
-					          </li>
-					          <li>
-					            <a href="/contact">Support Us</a>
-					           </li>
-					        </ul>
-	      				</nav>
+				<div>
+			        <ul>
+			          <li>
+			            <a href="/locations">Locations</a>
+			          </li>
+			          <li>
+			              <a href="/services">Services</a>
+			          </li>
+			          <li>
+			            <a href="/supports">Supports</a>
+			           </li>
+			           <li>
+			            <a href="/family-rentals">Family Rentals</a>
+			           </li>
+			           <li>
+			            <a href="/apply-now">Apply Now!</a>
+			           </li>
+			        </ul>
+			        <div class="social">
+			          <a href="/"><i class="fa fa-facebook"></i></a>
+			          <a href="/"><i class="fa fa-twitter"></i></a>
+			          <a href="/"><i class="fa fa-youtube"></i></a>
+			          <a href="/"><i class="fa fa-instagram"></i></a>
+			        </div>
       			</div>
-				<div>
-					<a class="solid-btn" href="/support-us/donation">DONATE</a>
-				</div>
-			</div>
-			<div class="logos">
-				<img src="<?php echo $this->getThemePath(); ?>/images/select-logo.png" class="select-logo">
-				<img src="<?php echo $this->getThemePath(); ?>/images/cql-bw-full.png" class="cql-logo">
-				<img src="<?php echo $this->getThemePath(); ?>/images/w3c-logo.png" class="w3c-logo">
 			</div>
 		</footer>
 
-		      <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=292131704190093&autoLogAppEvents=1"></script>
 <script src="<?php echo $this->getThemePath(); ?>/_js/vendor/aos.js"></script>
 <script type="text/javascript" src="<?php echo $this->getThemePath(); ?>/_js/main.js"></script>
 

@@ -1,0 +1,21 @@
+
+h2 {
+	line-height: 30px;
+}
+
+button {
+	color: $white;
+	background: $cp-green;
+	font-family: $main-font;
+	font-size: 20px;
+	padding: 10px 20px;
+	margin-top: 30px;
+	background: linear-gradient(to right, $cp-lite-green 50%, $cp-green 50%);
+  	background-size: 200% 100%;
+  	background-position: right bottom;
+  	transition: all .5s ease-out;
+
+  	&:hover {
+  		background-position: left bottom;
+  	}
+}

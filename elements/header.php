@@ -7,13 +7,10 @@
 	    <?php
 	    	$this->inc('app/page_settings.php');
 	    	$po = new PageOptions();
-
 	    ?>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 			<link rel="stylesheet" type="text/css" href="<?php echo $this->getThemePath(); ?>/_css/style.css">
-			<!-- <link rel="stylesheet" type="text/css" href="<?php echo $this->getThemePath(); ?>/_css/responsive.css">
-			<link rel="stylesheet" type="text/css" href="<?php echo $this->getThemePath(); ?>/_css/typography.css">
-    -->
 
 
 			<?php Loader::element('header_required'); ?> <!-- must be last in load order -->
@@ -25,20 +22,25 @@
   <div class="<?php echo $c->getPageWrapperClass()?>">
   <header>
     <div class="topbar">
-      <div><i class="fa fa-phone"></i><a href="tel:8454348300">(845) 434-8300</a></div>
+      <div class="contact-info">
+        <div>Contact us for more information</div>
+        <div> Stephanie Elberth or Scott Whitehead</div>
+        <div>
+            <div><i class="fas fa-phone"></i> 845-468-5280</div>
+            <div><i class="fas fa-envelope"></i><a href="mailto:services@newhopecommunity.org">services@newhopecommunity.org</a></div>
+        </div>
+      </div>
       <div>
         <div class="social">
-          <a href="/"><i class="fa fa-instagram"></i></a>
-          <a href="/"><i class="fa fa-linkedin"></i></a>
           <a href="/"><i class="fa fa-facebook"></i></a>
-          <a href="/"><i class="fa fa-youtube"></i></a>
           <a href="/"><i class="fa fa-twitter"></i></a>
+          <a href="/"><i class="fa fa-youtube"></i></a>
+          <a href="/"><i class="fa fa-instagram"></i></a>
         </div>
-        <a class="solid-btn" href="/support-us/donation">DONATE</a>
       </div>
     </div>
     <div class="navigation">
-      <div class="toggle-wrapper">
+      <!-- <div class="toggle-wrapper">
         <div class="menu-toggle inactive">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -46,33 +48,23 @@
           <span class="bg"></span>
         </div>
         <p>MENU</p>
+     </div>  -->
+     <div class="links">
+       <div><a href="/location">Location</a></div>
+       <div><a href="/family-rentals">Family Rentals</a></div>
      </div>
      <div class="logo">
-       <a href="/"><img src="<?php echo $this->getThemePath(); ?>/images/nh-logo-blue.png" alt="New Hope Logo"></a>
+      <a href="/">
+        <img src="<?php echo $this->getThemePath(); ?>/images/Compass-Pointe-Logo.svg" alt="Compass Pointe Logo" />
+      </a>
+      <div class="oval">
+      </div>
      </div>
-    <!--<ul class="nav">
-      <li class="">
-        <a href="/our-services" target="_self" class="">Our Services</a>
-        
-      </li>
-      <li class="">
-        <a href="/who-we-are" target="_self" class="">Who We Are</a>
-         <div class="submenu"><a href="/our-services/our-process">Our Process</a></div>
-      </li>
-      <li class="">
-        <a href="/support-us" target="_self" class="">Support Us</a>
-      </li>
-        </ul> -->
-        <?php   
-                    $bt = BlockType::getByHandle('autonav');
-                    $bt->controller->displayPages = 'top'; // 'top', 'above', 'below', 'second_level', 'third_level', 'custom', 'current'
-                    //$bt->controller->displayPagesCID = ''; // if display pages is set ‘custom’
-                    $bt->controller->orderBy = 'display_asc';  // 'chrono_desc', 'chrono_asc', 'alpha_asc', 'alpha_desc', 'display_desc','display_asc'             
-                    $bt->controller->displaySubPages = 'all';  //none', 'all, 'relevant_breadcrumb', 'relevant'
-                    $bt->controller->displaySubPageLevels = 'all'; // 'enough', 'enough_plus1', 'all', 'custom'
-                    $bt->controller->displaySubPageLevelsNum = '0'; // if displaySubPages is set 'custom'
-                    $bt->render('templates/main_nav'); // for template 'templates/template_name';
-                    ?>
+     <div class="join">
+       <a href="/join">Join Our Community <i class="fa fa-angle-right"></i></a>
+     </div>
+
+     <!-- end of header internal div -->
     </div>
   </header>
 

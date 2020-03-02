@@ -1,38 +1,86 @@
 // Header styles fof the Vibrant rebrand //
 
 header {
-	border-bottom: 1px solid $nh-blue;
+	box-shadow: 0px 13px 27px -9px rgba(0,0,0,0.75);
+	font-size: 16px;
+	letter-spacing: 1px;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 100;
 
+	@media only screen and (max-width: $lg-breakpoint) {
+		position: relative;
+	}
+
 	.topbar {
-		background: $nh-blue;
-		height: $topbar-height;
-		display: flex;
-		color: $white;
-		font-size: 1.2em;
-		justify-content: space-between;
 		align-items: center;
+		background: $nh-blue;
+		color: $white;
+		display: flex;
+		height: fit-content;
+		justify-content: space-between;
 
 		@media only screen and (max-width: $md-breakpoint) {
 			align-items: center;
 			height: auto;
-			justify-content: space-around;
-		}
-
-		.fa-phone {
-			margin: 0 5px 0 10px;
-
-			@media only screen and (max-width: $md-breakpoint) {
-				margin-left: 0;
-			}
+			justify-content: center;
 		}
 
 		a {
 			color: $white;
 			text-decoration: none;
+		}
+
+		.contact-info {
+			align-items: center;
+			display: flex;
+			padding: 5px 0;
+
+			@include flex-column-layout();
+			
+			>div {
+				align-items: center;
+				border-right: 1px solid $white;
+				display: flex;
+				padding: 0 15px;
+
+				.fas {
+					margin-right: 3px;
+				}
+
+				@media only screen and (max-width: $lg-breakpoint) {
+					border: 0;
+					line-height: 20px;
+					margin: 0;
+				}
+
+				&:last-child {
+					border: 0;
+				}
+				&:nth-child(2) {
+					@include hide-mobile();
+				}
+				&:nth-child(3) {
+					@include flex-column-layout(1300px);
+
+					>div {
+						border-right: 0;
+					}
+				}
+
+				>div {
+					align-items: center;
+					border-right: 1px solid $white;
+					flex-direction: row;
+					display: flex;
+					padding: 0 15px;
+
+					&:first-child {
+						padding-left: 0;
+					}
+				}
+			}
 		}
 
 		.social {
@@ -52,13 +100,6 @@ header {
 
 		div {
 			display: flex;
-
-			&:first-child {
-				
-				@media only screen and (max-width: $md-breakpoint) {
-					margin: 10px 0;
-				}
-			}
 
 			&:nth-child(2) {
 				
@@ -81,31 +122,95 @@ header {
 
 	.navigation {
 		align-items: center;
-		font-weight: bold;
 		background: $white;
+		color: $cp-gray;
 		display: flex;
-		font-size: 1.3em;
+		font-size: 18px;
+		font-weight: normal;
 		justify-content: space-around;
-		text-transform: uppercase;
 		min-height: 80px;
-		//padding: 10px 20px;
 		top: 0;
 		width: 100%;
 		z-index: 3;
 
-		@media only screen and (max-width: $md-breakpoint) {
-			padding: 0;
-			justify-content: space-between;
+		@include flex-column-layout();
+
+		@media only screen and (max-width: $lg-breakpoint) {
+			padding: 30px 0;
+			justify-content: center;
+			min-height: 150px;
+		}
+
+		>div {
+			display: flex;
+			justify-content: space-around;
+			width: 33.3%;
+
+			@include mobile-full-width();
 		}
 
 		.logo {
-			@media only screen and (max-width: $md-breakpoint) {
+			margin-top: 20px;
+			min-width: 350px;
+			justify-content: center;
+
+			img {
+				z-index: 2;
+				position: relative;
+				width: 100%;
+			}
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				min-width: 300px;
 				align-self: center;
-				margin-right: 10px;
+				order: 1;
+			}
+
+			.oval {
+				background: #fff;
+				//box-shadow: 0px 6px 3px -7px rgba(0,0,0,0.75);
+				border-radius: 60%;
+			 	display: block;
+			 	height: 100px;
+			 	position: absolute;
+			 	top: 45%;
+			 	width: 350px;
+				z-index: 1;
+
+				@include hide-mobile($xl-breakpoint);
 			}
 		}
 
-	.toggle-wrapper {
+		.links {
+			display: flex;
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				order: 3;
+			}
+
+			a {
+				color: $cp-gray;
+				text-decoration: none;
+				margin: 0 10px;
+			}
+		}
+
+		.join {
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				margin: 20px auto;
+				order: 2;
+			}
+
+			a {
+				color: $cp-blue;
+				font-weight: 600;
+				text-decoration: none;
+				margin: 0 10px;
+			}
+		}
+
+		.toggle-wrapper {
 			display: flex;
 			flex-direction: column;
 			width: 30px;
@@ -195,150 +300,5 @@ header {
 				}
 			}
 		}
-
-		.nav {
-            align-items: center;
-            display: flex;
-            font-weight: 700;
-            justify-content: flex-end;
-            text-align: right;
-            z-index: 10;
-
-            @media screen and (max-width: $xl-breakpoint) {
-                justify-content: center;
-            }
-
-            @media screen and (max-width: $md-breakpoint) {
-                align-items: flex-end;
-                background: black;
-                display: none;
-                font-size: 16px;
-                min-height: 1000px;
-                position: fixed;
-                top: 136px;
-                width: 100%;
-            }
-
-            @include flex-column-layout($md-breakpoint);
-
-            &.active {
-            	display: block;
-            }
-
-            >li {
-                color: $nh-blue;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                margin: 0 20px 0;
-                padding: 0 10px;
-                text-align: left;
-                text-decoration: none;
-
-                a {
-                	text-decoration: none;
-                }
-
-                >.submenu {
-                    max-height: 0;
-                    margin-top: -1px;
-                    overflow: hidden;
-                    padding: 0;
-                    position: absolute;
-                    top: 120px;
-                    transition: all .4s ease-out;
-                    z-index: 2;
-
-                    .nav-item {
-                    	background: $nh-blue;
-                    	border: $white 1px solid;
-                    	border-top: 0;
-                    	padding: 10px;
-                    	position: relative;
-
-                    	a {
-                    		color: $nav-color;
-                    		
-                    		&:hover {
-								color: white;
-								background: $nh-lt-blue;
-                    		}
-                    	}
-                    }
-
-                    .submenu {
-                    	margin-bottom: 0;
-                    	margin-top: 10px;
-
-                    	.nav-item {
-                    		color: white;
-                    		list-style-type: disc;
-                    		border: 0;
-                    	}
-                    }
-
-                    @media screen and (max-width: $md-breakpoint) {
-						max-width: 60%;
-						right: 0;
-						top: 0;
-
-						 >.nav-item {
-						 	border-top: 1px solid white;
-						 	border-left: 1px solid white;
-						 	margin-top: 0;
-						 	padding: 0;
-
-						 	&:last-child {
-						 		border-bottom: 1px solid white;
-						 	}
-							
-							a {
-								padding: 0 10px;
-							}
-
-						 }
-
-						 .submenu {
-						 	display: none;
-						 }
-                    }
-                }
-
-                &:hover {
-                    
-                    .submenu {
-                        max-height: 800px;
-                    }
-                }
-
-
-                @media screen and (max-width: $md-breakpoint) {
-                    background: $nh-blue;
-                    border-bottom: 1px solid white;
-                    font-size: 1.2em;
-                    height: auto;
-                    position: relative;
-                    margin: 0;
-                    text-align: left;
-                    width: 100%;
-
-                    a {
-                        align-items: center;
-                        color: white;
-                        display: flex;
-                        height: 60px;
-                        width: 100%;
-
-                        &:hover {
-                            color: white;
-                        }
-                    }
-
-                    &:hover {
-                        background: $nh-lt-blue;
-                    }
-                }
-            }
-        }
 	}
 }

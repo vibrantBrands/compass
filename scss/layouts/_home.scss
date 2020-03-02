@@ -1,287 +1,414 @@
+.home_wrapper {
+	color: $cp-gray;
+	font-family: $main-font;
+	line-height: 24px;
 
-.homepage {
+	.content {
+		padding-top: 95px;
 
-	.ctas {
-		background: $nh-blue;
-	
-		.container {
-			align-items: center;
-			font-size: 1.7em;
-			font-weight: bold;
-			justify-content: space-between;
-			display: flex;
-			padding: 50px 0;
+		@media only screen and (max-width: $lg-breakpoint) {
+			padding-top: 0px;
+		}
 
-			@include flex-column-layout($md-breakpoint);
+		img {
+			width: 100%;
+		}
+	}
 
-			>div {
-				@include mobile-bottom-margin($md-breakpoint, 50px);
+	.divider {
+		background: $cp-green;
+		color: $white;
+		font-family: $main-font;
+		font-size: 20px;
+		font-weight: bold;
+		padding: 12px;
+		text-align: center;
+	}
 
-				&:nth-child(even) {
+	.ccm-image-slider-text {
+		margin-top: 80px;
+		left: 10%;
 
-					@media only screen and (max-width: $md-breakpoint) {
-		        		display: none;
-		    		}
+		@media only screen and (max-width: $lg-breakpoint) {
+			margin-top: 0;
+			left: 0;
+			top: 2%;
+		}
 
-				}
+		.tagline,
+		.cta {
+			background: rgba(108, 190, 76, .8);
+			color: $white;
+			display: block;
+			font-family: $main-font;
+			margin-bottom: 30px;
+			min-width: 420px;
+			padding: 20px;
+			width: fit-content;
 
+			h2 {
+				font-weight: bold;
 			}
 
-			img {
-				align-self: center;
-				margin-right: 20px;
+			@media only screen and (max-width: $lg-breakpoint) {
+				margin-bottom: 10px;
+			}
+		}
+
+		.tagline {
+
+			@include hide-mobile();
+
+			h2 {
+				font-size: 38px;
+				margin: 10px 0;
+
+				@media only screen and (max-width: $lg-breakpoint) {
+					font-size: 25px;
+				}
+			}
+			p {
+				font-size: 25px;
+				margin: 0 auto;
+
+				@media only screen and (max-width: $lg-breakpoint) {
+					font-size: 18px;
+				}
+			}	
+		}
+		.cta {
+			align-items: center;
+			background: rgba(0,169,210,.8);
+			display: flex;
+			font-size: 21px;
+			justify-content: space-between;
+
+			@include hide-mobile();
+
+			h2 {
+				font-size: 30px;
+				margin: 5px 0;
+
+				@media only screen and (max-width: $lg-breakpoint) {
+					font-size: 25px;
+				}
+			}
+			p {
+				margin: 0 auto;
+			}
+			i {
+				font-size: 2em;
+			}
+		}
+	}
+
+	.neighbor {
+		color: $white;
+		display: flex;
+		font-family: $main-font;
+		height: fit-content;
+		position: relative;
+
+		@include flex-column-layout();
+
+		@media only screen and (max-width: $lg-breakpoint) {
+			height: fit-content;
+			width: 100%;
+		}
+
+		button {
+			position: absolute;
+			right: 5%;
+			top: 5%;
+
+			@include hide-mobile();
+		}
+
+		ul {
+			list-style-type: disc;
+			padding-left: 35px;
+			text-align: left;
+		}
+
+		.icon {
+			left: 47%;
+			margin: -50px 0 0 -50px;
+			position: absolute;
+			top: 50%;
+			width: 100px;
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				display: none;
+			}
+		}
+		
+		div {
+			background: $cp-blue;
+			font-size: 18px;
+			line-height: 24px;
+			overflow-y: hidden;
+			width: 35%;
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height: fit-content;
 			}
 
 			p {
-				font-size: 1em;
-				line-height: 26px;
-				margin-bottom: 0;
-				text-align: left;
+
+				@media only screen and (max-width: $lg-breakpoint) {
+					width: 70%;
+				}
+			}
+
+			h3 {
+				border-bottom: 4px solid $cp-lite-blue;
+				font-size: 26px;
+				line-height: 35px;
+				padding-bottom: 10px;
+			}
+
+			.circle-bg {
+				background: $cp-blue;
+				border-radius: 49%;
+				display: block;
+				height: 500px;
+				left: 16%;
+				position: absolute;
+				width: 500px;
+				z-index: 2;
+			}
+
+			&:nth-child(2) {
+				padding: 20px 0 20px 75px;
+
+				@media only screen and (max-width: $lg-breakpoint) {
+					height: fit-content;
+					padding: 30px 0px;
+					text-align: center;
+					width: 100%;
+
+					h3 {
+						margin: 10px 0 0 0;
+					}
+				
+					p {
+						padding: 0 5px;
+						margin: 30px 0;
+					}
+				}
+			}
+
+			&:nth-child(3) {
+				background: url('../images/NewHope_imagine-your-home.jpg') no-repeat;
+				background-size: cover;
+				background-position: center left;
+				padding: 0;
+				width: 65%;
+
+				@media only screen and (max-width: $lg-breakpoint) {
+					background: url('../images/NewHope_imagine-your-home.png') no-repeat;
+					background-size: cover;
+					background-position: center left;
+					height: 300px;
+					width: 100%;
+				}
+
+				.curve {
+					height: 100%;
+				}
+			}
+		}
+
+		&.lifestyle {
+
+			div {
+				background: $cp-green;
+				width: 45%;
+
+				&:nth-child(3) {
+					background: url('../images/NewHope_fulfilling-lifestyle-green.png') no-repeat;
+					background-size: cover;
+					background-position: 0 -40px;
+					width: 55%;
+
+					@media only screen and (max-width: $xl-breakpoint) {
+						background-position: 0 0;
+					}
+
+					@include mobile-full-width();
+
+					@media only screen and (max-width: $lg-breakpoint) {
+						background: url('../images/NewHope_fulfilling-lifestyle.png');
+						background-size: cover;
+					}
+				}
+
+				@include mobile-full-width();
+			}
+
+			h3 {
+				border-bottom: 4px solid $cp-lite-green;
+			}
+
+			.icon {
+				left: 58%;
+
+				@media only screen and (max-width: $lg-breakpoint) {
+					left: 50%;
+					top: 45%;
+				}
+			}
+
+			ul {
+				margin: 0 50px;
+			}
+		}
+
+		&.chart {
+			height: 300px;
+
+			@media only screen and (max-width: $lg-breakpoint) {
+					height: fit-content;
+				}
+
+			.icon {
+				width: 100px;
+				left: 42%;
+
+				@media only screen and (max-width: $lg-breakpoint) {
+					top: 35%;
+				}
+			}
+
+			.fa {
+				color: $white;
+				margin: 5px 5px 0 0;
 			}
 
 			a {
-				align-items: center;
-				justify-content: center;
-				display: flex;
 				color: $white;
 				text-decoration: none;
-				margin-right: 20px;
 			}
+
+			div {
+				
+				&:nth-child(3) {
+					background: url('../images/NewHope_chart-a-new-course-curve.png') no-repeat;
+					background-size: cover;
+					background-position: 0 -100px;
+
+					@media only screen and (max-width: $lg-breakpoint) {
+						background: url('../images/NewHope_chart-a-new-course.png') no-repeat;
+						background-size: cover;
+						background-position: center;
+					}
+				}
+			} 
 		}
 	}
 
-	.mission {
-		padding:0 5% 40px;
+	.community {
+		padding-bottom: 50px;
 		text-align: center;
 
-		h1 {
-			font-size: 2em;
+		h2 {
+			color: $cp-blue;
+			font-weight: bold;
+			margin: 50px auto 20px;
+			text-align: center;
+			width: 50%;
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				width: 90%;
+			}
 		}
 
 		p {
-			font-size: 1.4em;
+			margin: 0 auto;
+			width: 80%;
 		}
-
-		 @media only screen and (min-width: $sm-breakpoint) {
-        	padding:0 15% 40px;
-    	}
 	}
 
-	.newhope-info {
-		padding: 70px 0;
+	.pictures {
+		display: flex;
+	}
 
-		@media only screen and (max-width: $md-breakpoint) {
-		    padding-top: 30px;
+	.description {
+		padding: 50px 0;
+
+		.container {
+			display: flex;
+
+			@include flex-column-layout();
+
+			div {
+				width: 50%;
+				display: flex;
+				justify-content: center;
+
+				@include mobile-full-width($lg-breakpoint, 90%);
+			}
+
+			ul {
+				margin: 0;
+				width: 80%;
+				
+				li {
+					&:before {
+						content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+						color: $cp-blue; /* Change the color */
+						font-weight: bold; /* If you want it to be bold */
+						display: inline-block; /* Needed to add space between the bullet and the text */
+						width: 1em; /* Also needed for space (tweak if needed) */
+						margin-left: -1em; /* Also needed for space (tweak if needed) */
+					}
+				}
+			}
 		}
+	}
+
+	.floorplans {
+		text-align: center;
 
 		.container {
 			align-items: center;
 			display: flex;
-			justify-content: space-between;
+			justify-content: center;
 
-			@include flex-column-layout($lg-breakpoint);
+			@include flex-column-layout();
 
-			>div {
-				margin-top: 30px;
-				width: 247px;
+			div {
+				padding: 40px 10px;
+				width: 25%;
 
-				@media only screen and (max-width: $md-breakpoint) {
-		    		margin-top: 15px;
+				img {
+					height: auto;
+					width: 100%;
+
+					@media only screen and (max-width: $lg-breakpoint) {
+						width: 70%;
+					}
+
 				}
 
-				.title {
-					background: $nh-green;
+				&:first-child {
+					@include hide-mobile();
 				}
 
 				&:nth-child(2) {
+					width: 50%;
+					padding: 0;
 
-					.title {
-						background: $nh-blue;
+					@include mobile-full-width();
+				}
+
+				@media only screen and (max-width: $lg-breakpoint) {
+						width: 70%;
 					}
-				}
-
-				&:nth-child(3) {
-
-					.title {
-						background: $nh-gold;
-					}
-				}
-
-				&:nth-child(4) {
-
-					.title {
-						background: $nh-red;
-					}
-				}
-			}
-
-			.title {
-				
-				color: $white;
-				display: block;
-				display: flex;
-				font-weight: bold;
-				padding-top: 7px;
-				position: absolute;
-				height: 50px;
-				justify-content: center;
-				margin-top: -50px;
-				text-align: center;
-				width: 247px;
-				z-index: 2;
 			}
 		}
 	}
-
-	.greenhouse-bg {
-		background-position: 0 100%;
-		background: url('../images/background.png') no-repeat;
-		background-size: cover;
-		height: auto;
-		min-height: 1100px;
-		width: 100%;
-	}
-
-	.statistics {
-
-		@include hide-mobile($md-breakpoint);
-	}
-
-	.buttons {
-		
-
-		@media only screen and (min-width: $md-breakpoint) {
-        	margin-top: 150px;
-    	}
-
-		.container {
-			align-items: center;
-			display: flex;
-			justify-content: space-around;
-
-			@include flex-column-layout($md-breakpoint);
-		}
-
-		.btn {
-			margin-bottom: 15px;
-
-			@media only screen and (max-width: $md-breakpoint) {
-        		width: 85%;
-    		}
-		}
-	}
-
-	.connect {
-		background: url('../images/e-newsletter-bg.png') no-repeat;
-		background-size: cover;
-		color: $white;
-		padding: 60px 0;
-		font-size: 1.6em;
-		font-weight: bold;
-
-		.container {
-			display: flex;
-			justify-content: flex-end;
-
-			@include flex-column-layout($md-breakpoint);
-
-			@media only screen and (max-width: $md-breakpoint) {
-        		align-items: center;
-    		}
-		}
-
-		i {
-			margin-right: 10px;
-		}
-
-		.enewsletter {
-			width: 350px;
-			margin-top: 40px;
-
-			@media only screen and (max-width: $lg-breakpoint) {
-        		width: 70%;
-    		}
-
-			input {
-				margin-top: 30px;
-			}
-		}
-
-		.social {
-			display: flex;
-			margin: 40px 0 0 30px;
-			width: 380px;
-
-			@media only screen and (max-width: $lg-breakpoint) {
-				align-items: center;
-        		width: 80%;
-        		margin-left: 0;
-    		}
-
-			@include flex-column-layout($md-breakpoint);
-
-			.facebook-feed {
-				background: $white;
-				color: $nh-blue;
-				font-size: 0.8em;
-				font-weight: normal;
-				margin-top: 30px;
-				min-height: 300px;
-				max-width: 300px;
-				padding: 10px;
-
-				.logo-box {
-					align-items: center;
-					border: 1px solid $nh-blue;
-					display: flex;
-					float: left;
-					font-weight: bold;
-					margin-right: 10px;
-					height: 60px;
-					justify-content: center;
-					text-align: center;
-					width: 60px;
-				}
-
-				img {
-					margin-top: 15px;
-				}
-			}
-			
-			a {
-				color: $white;
-			}
-
-			.fb-like {
-				margin-top: 8px;
-			}
-
-			.icons {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				margin-left: 20px;
-				//min-height: 300px;
-				padding-top: 60px;
-
-				@media only screen and (max-width: $md-breakpoint) {
-					margin-left: 0;
-        			flex-direction: row;
-
-        			i {
-        				background: $nh-lt-blue;
-        				border-radius: 10px;
-        				color: $white;
-        				padding: 10px;
-        			}
-    			}
-			}
-		}
-	}
-	
-	.ccm-image-slider-title {
-		position: absolute;
-		left: -9999px;
-	}
-	
 }
