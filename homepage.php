@@ -23,7 +23,7 @@
 			</p>
 		</div>
 		<div>
-			<button>Be Our Neighbor</button>
+			<a href="/join"><button>Be Our Neighbor</button></a>
 		</div>
 	</section>
 	<section class="community">
@@ -81,7 +81,7 @@
 			</p>
 		</div>
 		<div>
-			<button>Be Our Neighbor</button>
+			<a href="/join"><button>Be Our Neighbor</button></a>
 		</div>
 	</section>
 	<section class="community">
@@ -105,7 +105,7 @@
 			<div>
 				<h2>Affordable living – <br/>amazing life!</h2>
 				<p>Compass Pointe Living is now under construction, and space is limited. Contact us today to learn more and reserve your space in this state-of-the-art community. Call us and we will walk you through the process</p>
-				<button>See All Floorplans</button>
+				<a href="/floorplans"><button>See All Floorplans</button></a>
 			</div>
 			<div><img src="<?php echo $this->getThemePath(); ?>/images/floorplan-D.png" alt="Floor Plan 2" class="floorplan" /></div>
 		</div>

@@ -16,9 +16,9 @@ footer {
 		}
 
 		p {
-			text-align: center;
+			text-align: left;
 			font-size: 13px;
-			width: 60%;
+			width: 35%;
 		}
 
 		>div {
@@ -50,9 +50,19 @@ footer {
 			}
 
 			>ul {
+				align-items: center;
 				display: flex;
-				justify-content: space-between;
+				justify-content: flex-end;
 				width: 100%;
+
+				li {
+					margin-left: 30px;
+
+					.ehl {
+						color: $nh-blue;
+						width: 80px;
+					}
+				}
 
 				@media only screen and (max-width: $lg-breakpoint) {
 					flex-direction: column;

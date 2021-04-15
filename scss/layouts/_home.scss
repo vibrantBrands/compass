@@ -29,6 +29,11 @@
 		margin-top: 80px;
 		left: 10%;
 
+		h1, h2 {
+			color: $white;
+		}
+
+
 		@media only screen and (max-width: $lg-breakpoint) {
 			margin-top: 0;
 			left: 0;
@@ -106,7 +111,7 @@
 		color: $white;
 		display: flex;
 		font-family: $main-font;
-		height: fit-content;
+		height: 500px;
 		position: relative;
 
 		@include flex-column-layout();
@@ -150,9 +155,9 @@
 			width: 35%;
 
 			@media only screen and (max-width: $lg-breakpoint) {
+				align-items: center;
 				display: flex;
 				flex-direction: column;
-				align-items: center;
 				height: fit-content;
 			}
 
@@ -214,6 +219,7 @@
 					background-position: center left;
 					height: 300px;
 					width: 100%;
+					padding: 30px 0;
 				}
 
 				.curve {
@@ -243,6 +249,8 @@
 					@media only screen and (max-width: $lg-breakpoint) {
 						background: url('../images/NewHope_fulfilling-lifestyle.png');
 						background-size: cover;
+						background-position: center;
+						height: 600px;
 					}
 				}
 
@@ -268,7 +276,7 @@
 		}
 
 		&.chart {
-			height: 300px;
+			height: 400px;
 
 			@media only screen and (max-width: $lg-breakpoint) {
 					height: fit-content;
@@ -276,7 +284,7 @@
 
 			.icon {
 				width: 100px;
-				left: 42%;
+				left: 47%;
 
 				@media only screen and (max-width: $lg-breakpoint) {
 					top: 35%;
@@ -288,6 +296,11 @@
 				margin: 5px 5px 0 0;
 			}
 
+			p {
+				font-size: 20px;
+				line-height: 34px;
+			}
+
 			a {
 				color: $white;
 				text-decoration: none;
@@ -296,12 +309,12 @@
 			div {
 				
 				&:nth-child(3) {
-					background: url('../images/NewHope_chart-a-new-course-curve.png') no-repeat;
+					background: url('../images/football-curve.png') no-repeat;
 					background-size: cover;
-					background-position: 0 -100px;
+					background-position: center;
 
 					@media only screen and (max-width: $lg-breakpoint) {
-						background: url('../images/NewHope_chart-a-new-course.png') no-repeat;
+						background: url('../images/football.jpg') no-repeat;
 						background-size: cover;
 						background-position: center;
 					}
@@ -315,10 +328,6 @@
 		text-align: center;
 
 		h2 {
-			color: $cp-blue;
-			font-weight: bold;
-			margin: 50px auto 20px;
-			text-align: center;
 			width: 50%;
 
 			@media only screen and (max-width: $lg-breakpoint) {

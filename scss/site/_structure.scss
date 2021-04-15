@@ -1,6 +1,13 @@
 
-h2 {
-	line-height: 30px;
+h1, h2 {
+	color: $cp-blue;
+	font-weight: bold;
+	margin: 50px auto 20px;
+	text-align: center;
+	}
+
+p {
+	line-height: 20px;
 }
 
 button {

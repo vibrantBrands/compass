@@ -1,0 +1,39 @@
+/* Wufoo form styles */
+
+.wufoo .info {
+  display: none !important;
+}
+
+html.embed {
+  background-color: #009cc4 !important;
+  padding: 40px;
+}
+
+.embed #container {
+  text-align: center;
+}
+
+.wufoo label.desc {
+  color: white !important;
+  font-size: 20px !important;
+}
+
+.wufoo input.btTxt {
+  background: #6cbe4c;
+  border: none;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 25px;
+  margin: 20px auto;
+  outline: none;
+  padding: 12px 20px 5px;
+  text-transform: uppercase;
+}
+
+.wufoo input.text {
+  padding: 10px;
+}
+
+.wufoo li.focused {
+  background: #009cc4 !important;
+}

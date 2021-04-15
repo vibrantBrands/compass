@@ -7,26 +7,23 @@
 				<div>
 			        <ul>
 			          <li>
-			            <a href="/locations">Locations</a>
+			            <a href="/location">Location</a>
 			          </li>
-			          <li>
-			              <a href="/services">Services</a>
-			          </li>
-			          <li>
-			            <a href="/supports">Supports</a>
-			           </li>
 			           <li>
 			            <a href="/family-rentals">Family Rentals</a>
 			           </li>
 			           <li>
 			            <a href="/apply-now">Apply Now!</a>
 			           </li>
+			           <li>
+			           	<img src="<?php echo $this->getThemePath(); ?>/images/ehl.svg" class="ehl">
+			           </li>
 			        </ul>
 			        <div class="social">
-			          <a href="/"><i class="fa fa-facebook"></i></a>
+			          <!-- <a href="/"><i class="fa fa-facebook"></i></a>
 			          <a href="/"><i class="fa fa-twitter"></i></a>
 			          <a href="/"><i class="fa fa-youtube"></i></a>
-			          <a href="/"><i class="fa fa-instagram"></i></a>
+			          <a href="/"><i class="fa fa-instagram"></i></a> -->
 			        </div>
       			</div>
 			</div>
